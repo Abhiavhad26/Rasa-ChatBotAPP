@@ -1,0 +1,63 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_i_am_a_bot
+
+- rule: Respond to user asking about roles
+  steps:
+      - intent: ask_roles
+      - action: utter_ask_roles
+
+- rule: Respond to bill payment questions
+  steps:
+      - intent: ask_bill_payment
+      - action: utter_ask_bill_payment
+
+- rule: Respond to payment without verification
+  steps:
+      - intent: ask_payment_without_verification
+      - action: utter_ask_payment_without_verification
+
+- rule: Respond to verification document questions
+  steps:
+      - intent: ask_verification_docs
+      - action: utter_ask_verification_docs
+
+- rule: Respond to verification time questions
+  steps:
+      - intent: ask_verification_time
+      - action: utter_ask_verification_time
+
+- rule: Respond to adding products as merchant
+  steps:
+      - intent: ask_add_products
+      - action: utter_ask_add_products
+
+- rule: Respond to adding selling points
+  steps:
+      - intent: ask_add_selling_point
+      - action: utter_ask_add_selling_point
+
+- rule: Respond to selling point manager login queries
+  steps:
+      - intent: ask_sp_manager_login
+      - action: utter_ask_sp_manager_login
+
+- rule: Respond to wallet withdrawal questions
+  steps:
+      - intent: ask_withdraw_amount
+      - action: utter_ask_withdraw_amount
+
+- rule: Respond to nearby selling points questions
+  steps:
+      - intent: ask_nearby_selling_points
+      - action: utter_ask_nearby_selling_points

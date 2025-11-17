@@ -1,0 +1,458 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - good morning
+    - good evening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremely sad
+    - so saad
+    - so sad
+    - I am in trouble
+    - I am very upset
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: help
+  examples: |
+    - i need a help
+    - can you help me?
+    - i need your assistance
+    - please help
+    - can you guide me?
+- intent: ask_weather
+  examples: |
+    - what’s the weather like today?
+    - tell me today’s weather
+    - how’s the weather?
+    - give me the weather report
+    - is it raining today?
+    - weather update please
+
+- intent: inform
+  examples: |
+    - in Mumbai
+    - Pune
+    - Delhi
+    - the city is Bangalore
+    - Chennai
+    
+- intent: ask_roles
+  examples: |
+    - How many roles are there in NG App?
+    - What are the different roles available in NG App?
+    - How many types of users can use the SuperAPP?
+    - Can you tell me the roles present in NG App?
+    - List all the user types in SuperAPP.
+    - How many user categories exist in NG App?
+    - What roles does NG App have?
+    - Tell me roles in NG App
+    - roles in ng app
+    - Roles available in ng app
+    - Who can use NG App — what roles are there?
+    - Does the app have merchants and distributors?
+    - Are merchants and distributors roles in the app?
+    - How many user roles are there in NG app?
+    - What roles does the NG SuperApp support?
+    - What type of roles are available in NG app?
+
+- intent: ask_bill_payment
+  examples: |
+    - Can I pay my bills using the NG App?
+    - Can I pay bills from the app?
+    - Is bill payment available in NG App?
+    - Can I do utility payments through the app?
+    - Can I settle invoices with NG App?
+    - Do you support bill payments?
+    - How do I pay a bill using the app?
+    - Is it possible to pay bills with NG App?
+    - Can I pay electricity or water bill in NG App?
+    - Does NG App support bill payments?
+    - Can I make bill payments through SuperAPP?
+    - Is there an option to pay bills in NG App?
+    - Which bills can I pay on NG app?
+    - Can I pay my utility bills via NG App?
+
+- intent: ask_payment_without_verification
+  examples: |
+    - Can I make payment without verifying my account?
+    - Do I need to verify my account to pay?
+    - Is it necessary to verify account to make payments?
+    - Can unverified users pay?
+    - Can I pay someone without completing verification?
+    - Is account verification required for payments?
+    - What is the payment limit without verification?
+    - How much can I pay without verification?
+    - Is it possible to send money before verifying my account?
+    - Can I pay without KYC?
+    - Can I pay above the limit without verification?
+
+- intent: ask_verification_process
+  examples: |
+    - How can I verify my account?
+    - What documents are needed for verification?
+    - How to verify myself in NG App?
+    - Tell me verification process.
+    - How do I complete verification?
+    - What ID proof is accepted for verification?
+    - How do I upload ID and biometric?
+    - How do I complete my account verification?
+    - How can I get my NG App account verified?
+
+- intent: ask_verification_time
+  examples: |
+    - How much time to verify my account?
+    - How long does account verification take?
+    - When will my account be verified?
+    - Time required for verification?
+    - After submitting documents, how long till I am verified?
+    - How many hours needed for verification?
+    - What is the verification turnaround time?
+    - Is verification instant or delayed?
+
+- intent: ask_add_products
+  examples: |
+    - How can I add my products as a merchant?
+    - How do I upload my products?
+    - What is the process to add products?
+    - How do I list my products as a merchant?
+    - Where can I upload my items?
+    - How do I create new product listings?
+    - I am unable to add my products as a merchant.
+    - I can’t upload my products.
+    - The app is not letting me add products.
+    - Why am I not able to add products?
+    - I tried but can't list my products.
+    - My product is not uploading what to do?
+    - I can’t find the option to add products.
+    - Where do I go to add products?
+    - How do I add new items to my shop?
+    - Step to add products as a seller?
+    - How to upload product catalogue?
+
+- intent: ask_nearby_selling_points
+  examples: |
+    - How to find my nearby selling points?
+    - How can I locate nearby selling points?
+    - Where can I check nearest selling points?
+    - How to search selling points?
+    - Show me selling points near my location.
+    - Where can I see nearby seller points?
+    - My app is not showing selling points.
+    - Why am I unable to locate selling points?
+    - selling points
+    - nearest selling points
+
+- intent: ask_add_selling_point
+  examples: |
+    - How to add a selling point as a distributor?
+    - What is the process to create a selling point?
+    - How can I register a selling point?
+    - Where can I add selling point details?
+    - How do distributors add selling points?
+    - How do I onboard a selling point manager?
+    - Why can't I add a selling point?
+    - Option to add selling point is not showing.
+    - Process of creating selling points.
+    - Creating selling point details.
+    - How can I create new selling points?
+
+- intent: ask_manager_login
+  examples: |
+    - How can a selling point manager login?
+    - What is the login process for selling point manager?
+    - How does a manager access their account?
+    - Who creates login for selling point manager?
+    - How can SP managers access their account?
+    - Why can’t the selling point manager log in?
+    - Manager login is not working.
+    - Tell me manager login process.
+    - selling point manager login
+    - manager login issues
+
+- intent: ask_withdraw
+  examples: |
+    - Can I withdraw amount from my wallet?
+    - How can I withdraw money from my wallet?
+    - Is wallet withdrawal allowed?
+    - Can I transfer wallet balance to my bank?
+    - How to cash out wallet balance?
+    - What are withdrawal options?
+    - money withdraw process
+    - withdraw amount
+    - withdraw money
+    - can I transfer money to others?    
+
+#- intent: ask_roles
+#  examples: |
+#    - What are the different roles available in the NG App?
+#    - How many types of users can use the SuperAPP?
+#    - Can you tell me the roles present in the NG App?
+#    - List all the roles or user types in the SuperAPP.
+#    - How many user categories exist in NG App?
+#    - What are the roles supported by NG App?
+#    - Who can use NG App — what roles are available?
+#    - How many roles are there in NG App?
+#    - What roles does the NG SuperApp have?
+#    - Tell me the roles available in NG App.
+#    - What user types exist in the NG SuperAPP?
+#    - Which roles are supported by the app?
+#    - What types of roles are available in NG App?
+#    - What roles are there in NG App?
+#    - Roles in NG SuperApp?
+#    - How many user roles are there in the NG App?
+#    - Tell me different types of roles in NG App.
+#    - Does the app have merchant and distributor roles?
+#    - Are there merchants and distributors in the NG App?
+#    - Does NG App support merchant role?
+#
+#- intent: verify_account
+#  examples: |
+#    - How can I verify my account?
+#    - What is the process to verify my account?
+#    - How do I get my NG App account verified?
+#    - What documents are needed for verification?
+#    - Tell me the steps to verify my account.
+#    - How can I complete my account verification?
+#
+#- intent: verification_time
+#  examples: |
+#    - How much time does account verification need?
+#    - How long will it take to verify my account?
+#    - When will my account be verified after I submit docs?
+#    - What is the verification turnaround time?
+#    - Tell me when my account will verify?
+#    - Time to verify Account?
+#    - Actual time to Account virfication.
+#    - what is the Actual time to take account verification
+#    - How much time it will take to verify my account?
+#    - How many hours can take for account verification?
+#    - Expected time for verification?
+#    - How long does account verification take?
+#    - When will my account get verified?
+#    - What is the usual time for verification?
+#    - How many hours does it take to verify my profile?
+#    - How soon can my account be verified?
+#    - After submitting documents, how long till I am verified?
+#    - Is account verification instant or does it take time?
+#    - How much time does verification take?
+#    - How long does KYC usually take?
+#    - When can I start using full features after verification?
+#
+#- intent: pay_bills
+#  examples: |
+#    - Can I pay my bills using the NG App?
+#    - Can I pay bills from the app?
+#    - Is bill payment available in NG SuperApp?
+#    - Can I do utility payments through the app?
+#    - Can I settle invoices with NG App?
+#    - Can I recharge or pay bills on the app?
+#    - Do you support bill payments?
+#    - How do I pay a bill using the app?
+#    - Is it possible to pay bills with NG App?
+#    - Can I use NG App to pay my electricity or water bill?
+#    - Does NG App support bill payments?
+#    - Can I make bill payments through SuperAPP?
+#    - How do I pay my bills using NG App?
+#    - Is there an option to pay bills in NG App?
+#    - Can I pay my utility bills via NG App?
+#    - Can I pay any bill using NG App?
+#    - Which bills can I pay using the NG App?
+#    - What types of bills can be paid in NG App?
+#    - Is bill payment allowed for all users?
+#    - How can I pay bills in NG App?
+#    - Can I pay my phone or internet bill using the app?
+#
+#- intent: payment_without_verification
+#  examples: |
+#    - Can I make payment without verifying my account?
+#    - Is it possible to send money before verifying my account?
+#    - Can I make payments if my account isn’t verified yet?
+#    - Do I need to verify my account to make payments?
+#    - Can I pay someone without completing verification?
+#    - What’s the payment limit without verification?
+#    - What documents do I need to verify?
+#    - How to verify myself on the app?
+#    - What documents do I need to verify my account?
+#    - How do I complete verification?
+#    - How to KYC on NG App?
+#    - What ID proof is accepted for verification?
+#    - Can I verify with passport/driving license?
+#    - How do I upload my ID and biometric?
+#    - Steps to verify my account on the app.
+#    - Which documents are required for verification?
+#    - Do I need biometric for verification?
+#    - What is the process to verify my account?
+#    - How do I complete my account verification?
+#    - How can I get my NG App account verified?
+#    - Tell me the steps to verify my NG App profile.
+#    - Can you explain how account verification works?
+#    - How do I confirm my identity on NG App?
+#    - How to verify myself in ng app?
+#    - Tell me verification process?
+#
+#- intent: add_products_merchant
+#  examples: |
+#        - How can I add my products as a merchant?
+#        - How do I add my products as a merchant?
+#        - How can I upload products in my merchant account?
+#        - What is the process to add products as a merchant?
+#        - How do I list my products on the app as a merchant?
+#        - How can I register my products in the merchant dashboard?
+#        - I’m a merchant—how do I add my products?
+#        - Where can I upload my items as a merchant?
+#        - How do I create new product listings on my merchant account?
+#        - How can I add new items to my store as a merchant?
+#        - What steps do I follow to add products in my merchant panel?
+#        - I am new here. How do I add my products as a merchant?
+#        - Can you tell me how to upload products in my merchant shop?
+#        - Where do I go to add products to my merchant profile?
+#        - How can I add products to sell on the platform?
+#        - How do I put my products online as a merchant?
+#        - I am unable to add my products as a merchant.
+#        - I can’t upload my products in my merchant account.
+#        - Why am I not able to add products as a merchant?
+#        - The app is not letting me add my products.
+#        - I tried but I can’t list my products as a merchant.
+#        - I am facing issues while adding products as a merchant.
+#        - Adding products is not working for me as a merchant.
+#        - I don’t know how to add products, can you help?
+#        - My product is not uploading—what should I do?
+#        - I can’t find the option to add products in my merchant account.
+#
+#- intent: wallet_withdraw
+#  examples: |
+#    - Can I withdraw amount from my wallet?
+#    - Can I withdraw money from my wallet?
+#    - How do I take out cash from my wallet?
+#    - Is wallet withdrawal allowed?
+#    - Can I transfer money from my wallet to my bank?
+#    - How can I cash out my wallet balance?
+#    - Can I send my wallet money to my bank?
+#    - Can’t I withdraw money from my wallet?
+#    - Why am I not able to withdraw money from my wallet?
+#    - Why can’t I cash out my wallet balance?
+#    - Is it not possible to send wallet money to my bank?
+#
+#- intent: find_selling_points
+#  examples: |
+#    - How to find my nearby selling points?
+#    - How can I find nearby selling points?
+#    - Where can I locate selling points around me?
+#    - How do I search for the closest selling points?
+#    - Can I use the app to find selling points near me?
+#    - How can I check nearby selling points on the map?
+#    - Why can’t I find selling points near me?
+#    - My app is not showing nearby selling points—why?
+#    - Is there no option to search for selling points?
+#    - Why am I unable to locate nearby selling points?
+#    - Is the selling point map not working?
+#
+#- intent: add_selling_point_distributor
+#  examples: |
+#    - How to add a selling point as a distributor?
+#    - How can I add a selling point as a distributor?
+#    - What is the process for adding a selling point?
+#    - Where do I enter selling point details?
+#    - How do I onboard a selling point manager?
+#    - How can I create a new selling point in the app?
+#    - Why can’t I add a selling point?
+#    - The option to add selling point isn’t showing—why?
+#    - Is adding selling points restricted?
+#    - Why am I unable to register a selling point?
+#    - Is there no feature to add selling points as a distributor?
+#
+#- intent: sp_manager_login
+#  examples: |
+#    - How can a selling point manager login?
+#    - How does a selling point manager log in?
+#    - What is the login process for a selling point manager?
+#    - How does a manager access their selling point account?
+#    - How does a distributor create login access for a manager?
+#    - How can a selling point manager sign in?
+#    - Why can’t the selling point manager log in?
+#    - Is the manager login not working?
+#    - Why is the selling point manager not getting access?
+#    - Is there no login option for selling point managers?
+#    - Manager login failed—what should I do?
+
+    

@@ -1,0 +1,138 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - help
+  - ask_weather
+  - inform
+  - ask_roles
+  - verify_account
+  - verification_time
+  - pay_bills
+  - payment_without_verification
+  - add_products_merchant
+  - wallet_withdraw
+  - find_selling_points
+  - add_selling_point_distributor
+  - sp_manager_login
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+  - text: "Hello there , How's your day going?"
+  - text: "Hi! How Can I Assist You?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+  - text: "Was that helpful ?"
+  - text: "Was that useful ?"
+
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+  - text: "see you soon"
+  - text: " GoodBye !.Have a good day"
+
+  utter_i_am_a_bot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_help:
+  - text: "Sure!, I am here to help you.What kind of help do you want?"
+
+  utter_default:
+  - text: "Sorry, I didn’t quite get that 🤔 Can you rephrase?"
+
+  utter_ask_location:
+    - text: "Sure! Please tell me the city name 🌆."
+
+  utter_ask_roles:
+    - text: "NG App supports multiple roles including Distributor, Selling Point Manager, Merchant, and Customers."
+    - text: "The NG SuperApp includes four main roles: Distributor, SP Manager, Merchant, and End User."
+    - text: "Different roles in NG App are: Distributor, Merchant, Selling Point Manager, and Consumer."
+    - text: "You can use NG App as a Distributor, Merchant, SP Manager, or Customer."
+    - text: "NG App provides access to various roles such as Merchant, Distributor, SP Manager, and User."
+
+  utter_ask_bill_payment:
+      - text: "Yes! You can pay electricity, water, DTH, and other utility bills using NG App."
+      - text: "Bill payments are available on NG App — including prepaid, postpaid, electricity, water, and more."
+      - text: "You can easily pay your utility bills through the NG SuperApp from the Bill Payments section."
+      - text: "Yes, NG App supports bill payments for many services like electricity, broadband, and mobile."
+      - text: "Absolutely! Just open the Bill Pay section and choose the biller you want to pay."
+
+  utter_ask_payment_without_verification:
+      - text: "You can make limited payments without verification, but full access requires completing KYC."
+      - text: "Yes, you can pay without verification but only up to the allowed transaction limit."
+      - text: "Unverified users can make basic transactions, but for higher limits KYC is required."
+      - text: "You can send money without KYC, but only within the minimum threshold limits."
+      - text: "Verification isn’t mandatory for small transactions, but full features unlock after KYC."
+
+  utter_ask_verification_docs:
+      - text: "You can verify your account using Aadhaar, PAN, Passport, or Driving License."
+      - text: "For verification, you need valid ID proof like Aadhaar, PAN, or Passport."
+      - text: "To complete KYC, upload your government ID and biometric if required."
+      - text: "Verification documents include Aadhaar card, PAN card, and other valid ID proofs."
+      - text: "You must submit ID proof and complete the verification steps in-app to activate your account."
+
+  utter_ask_verification_time:
+      - text: "Verification usually takes 1–24 hours after submitting your documents."
+      - text: "Your account gets verified within a few hours, mostly the same day."
+      - text: "KYC approval may take up to 24 hours depending on document review."
+      - text: "Once documents are submitted, verification generally completes quickly, within hours."
+      - text: "Verification time varies, but most profiles are verified on the same day."
+
+  utter_ask_add_products:
+      - text: "Go to Merchant Dashboard → Products → Add Product and upload your product details."
+      - text: "To add products, open Merchant Panel and click on Add New Product."
+      - text: "You can upload products from the Merchant section by entering product name, price, and image."
+      - text: "Adding products is simple: open your merchant account → select Add Product → fill details."
+      - text: "If you are unable to add products, try updating the app or re-login and upload again."
+
+  utter_ask_add_selling_point:
+      - text: "As a distributor, go to Selling Points → Add New → Enter SP details to create a selling point."
+      - text: "You can add a selling point from your distributor panel under the Selling Point section."
+      - text: "To add a new selling point, open Distributor Dashboard → Selling Points → Add."
+      - text: "Distributors can register new selling points by filling the required SP details in the app."
+      - text: "If the option isn’t visible, ensure your distributor account is verified and updated."
+
+  utter_ask_sp_manager_login:
+      - text: "A Selling Point Manager logs in using the credentials created by the Distributor."
+      - text: "SP Managers must use their assigned username and password to log in."
+      - text: "The distributor creates login access for SP managers, who then use it to sign in."
+      - text: "SP manager login is available under the Selling Point Manager Login section."
+      - text: "If the SP manager cannot log in, ensure correct credentials or reset from the distributor panel."
+
+  utter_ask_withdraw_amount:
+      - text: "Yes, you can withdraw money by transferring to bank account, another wallet, or via selling point."
+      - text: "You can withdraw wallet funds through bank transfer or cash-out at a selling point."
+      - text: "NG App allows withdrawal through bank transfer, wallet-to-wallet, or seller point withdrawal."
+      - text: "To withdraw, go to Wallet → Withdraw → Select method (Bank, Wallet, Seller Point)."
+      - text: "Yes, withdrawal is available and you can choose any method that suits you."
+
+  utter_ask_nearby_selling_points:
+      - text: "You can find nearby selling points from the Selling Points section or map view in the app."
+      - text: "Open the app → Selling Points → it will show all nearby points on the map."
+      - text: "Nearby selling points are visible under the Locator or Map section in your app."
+      - text: "You can view closest selling points by enabling location and checking the Selling Point map."
+      - text: "If you cannot see selling points, check your location permission or app version."
+
+
+
+actions:
+    - action_get_weather
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
